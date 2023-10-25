@@ -44,13 +44,24 @@ public class ServicePrevu {
 
     public int getVolumePour(TypeIntervention type) {
         int result = 0;
-        switch (type) {
+       /* switch (type) {
             case CM:
                 result = getVolumeCM(); break;
             case TD:
                 result = getVolumeTD(); break;
             case TP:
                 result = getVolumeTP(); break;
+        }
+        return result;
+        */
+        if (type==TypeIntervention.CM){
+            result = getVolumeCM();
+        }
+        if (type==TypeIntervention.TP){
+            result = getVolumeTP();
+        }
+        if (type==TypeIntervention.TD){
+            result = getVolumeTD();
         }
         return result;
     }
