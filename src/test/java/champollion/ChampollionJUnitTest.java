@@ -1,17 +1,21 @@
 package champollion;
 
 import org.junit.jupiter.api.*;
+
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ChampollionJUnitTest {
 	Enseignant untel;
 	UE uml, java;
+	Intervention cours1;
 		
 	@BeforeEach
 	public void setUp() {
 		untel = new Enseignant("untel", "untel@gmail.com");
 		uml = new UE("UML");
-		java = new UE("Programmation en java");		
+		java = new UE("Programmation en java");
 	}
 	
 
@@ -35,6 +39,10 @@ public class ChampollionJUnitTest {
 		assertEquals(10 + 20, untel.heuresPrevuesPourUE(uml),
                          "L'enseignant doit maintenant avoir 30 heures prévues pour l'UE 'uml'");		
 		
+	}
+
+	public void testHeuresPrevues(){
+
 	}
 	
 }
